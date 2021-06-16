@@ -8,9 +8,9 @@ const login = () => {
         
         <div className="head">
         <h1> EQSurvey </h1> 
-        <button type="button" className="button1">Бүртгүүлэх</button>
+        <a href="../registration/registration.js" className="button1">Бүртгүүлэх</a>
         <div className="main"> 
-        <h2> БҮРТГЭЛЭЭРЭЭ НЭВТРЭХ</h2>
+        <h2> БҮРТГЭЛЭЭР НЭВТРЭХ</h2>
         
             <div className="login">
                 <div className="name">
