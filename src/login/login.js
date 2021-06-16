@@ -1,41 +1,45 @@
-import React from 'react'
-import './login.css';
+import React from "react";
+
 
 const login = () => {
 
 
-    return (
-        
-        <div className="head">
-        <h1> EQSurvey </h1> 
-        <a href="../registration/registration.js" className="button1">Бүртгүүлэх</a>
-        <div className="main"> 
-        <h2> БҮРТГЭЛЭЭР НЭВТРЭХ</h2>
-        
-            <div className="login">
-                <div className="name">
-                    <label>Enter your username</label> <br />
-                    <input type="text" Name="loginName" id="name"></input><br/> 
-                </div>
-                <div className="pass">
-                    <label>Enter your password</label> <br />
-                    <input type="password" Name="password" id="pass"></input><br/>
-                </div>
-                <div className="rememb">
-                    <input type="checkbox" id="remember-me" />
-                    <label className="remlab">Remember me </label>
-                    <a href="#">Forgot Password or Username</a>
-                </div>
-                
-                <button className="button" type="submit" onClick="">НЭВТРЭХ</button>
+  return (
+    <div className="Main">
+      <h1 className="Main-header"> EQSurvey </h1> 
+        <button type="button" className="Main-button">
+            Бүртгүүлэх
+        </button>
 
-            </div>
+    <div className="Login">
+        <h2 className="Login-header"> БҮРТГЭЛЭЭРЭЭ НЭВТРЭХ</h2>
+
+        <div className="Login-input">
+          <div className="Login-name">
+            <label className="Login-label">Enter your username</label> <br />
+            <input type="text" Name="loginName" id="name" required ></input>
+            <br />
+        </div>
+          
+        <div className="Login-password">
+            <label className="Login-label">Enter your password</label> <br />
+            <input type="password" Name="password" id="pass"></input>
+            <br />
+          </div>
+
+        <div className="Login-remember">
+            <input type="checkbox" id="remember-me" className="Login-check"/>
+            <label className="Login-remlabel"> Remember me </label>
+                <a href="#" className="Login-forgot">Forgot Password or Username</a>
         </div>
 
+            <button className="Login-button" type="submit" onClick="">
+                НЭВТРЭХ
+            </button>
+        </div>
+      </div>
     </div>
-    
+  );
+};
 
-    )
-}
-
-export default login 
+export default login;
