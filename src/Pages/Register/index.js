@@ -1,6 +1,6 @@
 import React from "react";
 
-const Registeration = () => {
+const Register = () => {
   return (
     <div className="head">
       <h1> EQSurvey </h1>
@@ -37,4 +37,4 @@ const Registeration = () => {
     </div>
   );
 };
-export default Registeration;
+export default Register;

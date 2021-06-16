@@ -1,6 +1,10 @@
-@import "./variables.css";
-@import "./mixins.css";
-@import "./global.css";
+@import "./_variables.css";
+@import "./_mixins.css";
+@import "./_global.css";
 
-@import "../login/login.css";
-@import "../registeration/registeration.css";
+@import "../Pages/Login/style.css";
+@import "../Pages/Register/style.css";
+
+@import "../Components/FormLogin/style.css";
+@import "../Components/FormImage/style.css";
+@import "../Components/Logo/style.css";

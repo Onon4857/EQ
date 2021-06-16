@@ -1,0 +1,7 @@
+.Logo {
+  height: auto;
+  width: 100%;
+  position: relative;
+  filter: invert(60%) sepia(40%) saturate(3000%) hue-rotate(197deg)
+    brightness(120%) contrast(80%);
+}
