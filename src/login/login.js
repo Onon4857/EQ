@@ -1,5 +1,4 @@
 import React from "react";
-import "./login.css";
 
 const login = () => {
   return (
@@ -12,8 +11,8 @@ const login = () => {
         <h2> БҮРТГЭЛЭЭРЭЭ НЭВТРЭХ</h2>
 
         <div className="Login">
-          <div className="Login-name">
-            <label>Enter your username</label> <br />
+          <div className="Login-header">
+            <label className="Login-label">Enter your username</label> <br />
             <input type="text" Name="loginName" id="name"></input>
             <br />
           </div>

@@ -8,7 +8,20 @@ h2 {
   text-align: center;
   padding-right: 50%;
 }
-
+.Login {
+  &-label {
+    color: red;
+    @mixin atSmall {
+      color: $mainblack;
+    }
+    @mixin atBig {
+      color: cyan;
+    }
+  }
+  &-header {
+    background: green;
+  }
+}
 .button {
   text-align: justify center;
   color: #fff;
