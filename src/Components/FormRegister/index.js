@@ -3,101 +3,103 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { store } from "react-notifications-component";
 
-const FormLogin = (props) => {
+const FormRegister = (props) => {
   const [showPassword, setShowPassword] = useState(false);
   const [nullUsername, setNullusername] = useState(false);
   const [nullPassword, setNullPassword] = useState(false);
   const [rememberMe, setRememberMe] = useState(false);
 
   const loginHandler = () => {
+    const firstname = document.getElementById("firstname").value;
+    const lastname = document.getElementById("lastname").value;
+    const email = document.getElementById("email").value;
     const username = document.getElementById("username").value;
     const password = document.getElementById("password").value;
+    const notification = {
+      insert: "top",
+      container: "top-right",
+      animationIn: ["animate__animated", "animate__fadeIn"],
+      animationOut: ["animate__animated", "animate__fadeOut"],
+      dismiss: {
+        duration: 3000,
+        onScreen: true,
+      },
+    };
 
-    if (!password || !username) {
-      setNullusername(true);
-      setNullPassword(true);
-      props.shake(true);
-
-      if (!username) {
+    const data = { firstname, lastname, email, username, password };
+    console.log(data);
+    axios
+      .post("/researcher/register", data)
+      .then(() => {
         store.addNotification({
-          title: "Нэвтрэх нэрээ оруулна уу?",
-          message: "Нэвтрэх нэр заавал оруулах шаардлагатай!",
-          type: "danger",
-          insert: "top",
-          container: "top-right",
-          animationIn: ["animate__animated", "animate__fadeIn"],
-          animationOut: ["animate__animated", "animate__fadeOut"],
-          dismiss: {
-            duration: 3000,
-            onScreen: true,
-          },
-        });
-      } else if (!password) {
-        store.addNotification({
-          title: "Нууц үгээ оруулна уу?",
-          message: "Нууц үг заавал оруулах шаардлагатай!",
-          type: "danger",
-          insert: "top",
-          container: "top-right",
-          animationIn: ["animate__animated", "animate__fadeIn"],
-          animationOut: ["animate__animated", "animate__fadeOut"],
+          ...notification,
+          title: "Амжилттай нэвтэрлээ.",
+          message: "Түр хүлээнэ үү?",
+          type: "success",
           dismiss: {
             duration: 4000,
-            onScreen: true,
           },
         });
-      }
+      })
+      .catch((err) => {
+        props.shake(true);
 
-      setTimeout(() => {
-        props.shake(false);
-      }, 400);
-    } else {
-      const data = { username, password };
-      axios
-        .post("/login", data)
-        .then((result) => {
-          store.addNotification({
-            title: "Амжилттай нэвтэрлээ.",
-            message: "Түр хүлээнэ үү?",
-            type: "success",
-            insert: "top",
-            container: "top-right",
-            animationIn: ["animate__animated", "animate__fadeIn"],
-            animationOut: ["animate__animated", "animate__fadeOut"],
-            dismiss: {
-              duration: 4000,
-            },
-          });
-        })
-        .catch((err) => {
-          props.shake(true);
-
-          store.addNotification({
-            title: "Алдаа гарлаа",
-            message: err.response.data.error,
-            type: "danger",
-            insert: "top",
-            container: "top-right",
-            animationIn: ["animate__animated", "animate__fadeIn"],
-            animationOut: ["animate__animated", "animate__fadeOut"],
-            dismiss: {
-              duration: 4000,
-              onScreen: true,
-            },
-          });
-
-          setTimeout(() => {
-            props.shake(false);
-          }, 400);
+        store.addNotification({
+          ...notification,
+          title: "Алдаа гарлаа",
+          message: err.response.data.error,
+          type: "danger",
         });
-    }
-  };
 
+        setTimeout(() => {
+          props.shake(false);
+        }, 400);
+      });
+  };
   return (
-    <div className="Form__auth FormLogin">
-      <h2>Нэвтрэх</h2>
+    <div className="Form__auth FormRegister">
+      <h2>Бүртгүүлэх</h2>
       <div>
-        <p>Нэвтрэх нэрээ оруулна уу?</p>
+        <p>Овог</p>
+        <input
+          onChange={() => {
+            setNullusername(false);
+            setNullPassword(false);
+          }}
+          className={`Form__input ${nullUsername && "Form__border--red"}`}
+          id="lastname"
+          placeholder="Жишээ: Батсайхан"
+          type="text"
+        />
+      </div>
+      <div>
+        <p>Нэр</p>
+        <input
+          onChange={() => {
+            setNullusername(false);
+            setNullPassword(false);
+          }}
+          className={`Form__input ${nullUsername && "Form__border--red"}`}
+          id="firstname"
+          placeholder="Жишээ: Болд"
+          type="text"
+        />
+      </div>
+      <div>
+        <p>Э-Мэйл</p>
+        <input
+          onChange={() => {
+            setNullusername(false);
+            setNullPassword(false);
+          }}
+          className={`Form__input ${nullUsername && "Form__border--red"}`}
+          id="email"
+          placeholder="Жишээ: bold@gmail.com"
+          type="text"
+        />
+      </div>
+      <div>
+        <p>Нэвтрэх нэр</p>
         <input
           onChange={() => {
             setNullusername(false);
@@ -111,7 +113,7 @@ const FormLogin = (props) => {
       </div>
 
       <div>
-        <p>Нууц үгээ оруулна уу?</p>
+        <p>Нууц үг</p>
         <div className="Form__auth__password">
           <input
             onChange={() => {
@@ -166,4 +168,4 @@ const FormLogin = (props) => {
   );
 };
 
-export default FormLogin;
+export default FormRegister;

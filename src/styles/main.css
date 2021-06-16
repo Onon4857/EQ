@@ -6,5 +6,6 @@
 @import "../Pages/Register/style.css";
 
 @import "../Components/FormLogin/style.css";
+@import "../Components/FormRegister/style.css";
 @import "../Components/FormImage/style.css";
 @import "../Components/Logo/style.css";

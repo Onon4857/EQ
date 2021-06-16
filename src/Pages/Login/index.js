@@ -6,8 +6,8 @@ const Login = () => {
   const [shake, setShake] = useState(false);
 
   return (
-    <div className={shake ? "Login Login--shake" : "Login"}>
-      <div className="Login--background"></div>
+    <div className={shake ? "Form Form--shake" : "Form"}>
+      <div className="Form--background"></div>
       <FormImage />
       <FormLogin shake={setShake} />
     </div>
