@@ -1,13 +1,57 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+h1 {
+  padding-left: 20px;
+  color: #6495ed;
+  width: 50%;
+  position: static;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h2 {
+  text-align: center;
+  padding-right: 50%;
+}
+.button {
+  text-align: justify center;
+  color: #fff;
+  height: 40px;
+  background-color: #6495ed;
+  margin-top: 20px;
+  width: 50%;
+  border-style: none;
+}
+.head {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}
+.button1 {
+  margin-left: 5px;
+  border-style: none;
+  background-color: #fff;
+  color: #6495ed;
+}
+.main {
+  width: 70%;
+  padding-left: 25%;
+  padding-top: 5%;
+  padding-right: 25%;
+}
+.name,
+.pass {
+  margin-top: 20px;
+  width: 70%;
+}
+#name,
+#pass {
+  margin-top: 18px;
+  width: 70%;
+  background-color: gainsboro;
+  border-style: none;
+  height: 30px;
+}
+.rememb {
+  width: 100%;
+  padding: 18px;
+}
+.remlab {
+  padding: 5px;
+  padding-right: 100px;
 }
