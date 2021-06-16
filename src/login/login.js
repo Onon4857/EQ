@@ -7,7 +7,7 @@ const login = () => {
   return (
     <div className="Main">
       <h1 className="Main-header"> EQSurvey </h1> 
-        <button type="button" className="Main-button">
+        <button type="submit" className="Main-button">
             Бүртгүүлэх
         </button>
 
