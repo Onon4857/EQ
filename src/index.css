@@ -57,7 +57,7 @@ html {
     transition: border 0.3s ease-in-out;
     font-size: 1rem;
     padding: 0.5rem 0.3rem;
-    color: #464646;
+    color: #030303;
     border-radius: 3px;
   }
 .Form__input:focus {
@@ -83,7 +83,7 @@ html {
       text-decoration: none;
     }
 .Form__auth h2 {
-      color: #464646;
+      color: #030303;
       font-weight: 400;
       font-size: 1.8rem;
       margin-bottom: 0.5rem;
@@ -94,7 +94,7 @@ html {
 .Form__auth p {
       margin-top: 1.2rem;
       margin-bottom: 0.5rem;
-      color: #464646;
+      color: #030303;
     }
 .Form__auth__password {
       display: flex;
@@ -106,7 +106,7 @@ html {
         top: 50%;
         transform: translateY(-50%);
         cursor: pointer;
-        color: #464646;
+        color: #030303;
       }
 .Form__auth__eye {
       margin-right: 0.05rem;
@@ -179,12 +179,12 @@ img {
     border-left: 8px solid rgb(33 197 93) !important;
   }
 .notification__title {
-  color: #464646 !important;
+  color: #030303 !important;
   font-weight: 500;
   font-size: 1rem !important;
 }
 .notification__message {
-  color: #464646 !important;
+  color: #030303 !important;
   font-weight: 300;
 }
 .FormLogin {

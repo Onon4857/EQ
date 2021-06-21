@@ -2,8 +2,7 @@
 @import "./_mixins.css";
 @import "./_global.css";
 
-@import "../Pages/Login/style.css";
-@import "../Pages/Register/style.css";
+
 
 @import "../Components/FormLogin/style.css";
 @import "../Components/FormRegister/style.css";

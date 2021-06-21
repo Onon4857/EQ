@@ -24,7 +24,12 @@
   }
 }
 @define-mixin atVeryBig {
-  @media (min-width: 1700px) {
+  @media (min-width: 1600px) {
+    @mixin-content;
+  }
+}
+@define-mixin atLot {
+  @media (min-width: 1600px) {
     @mixin-content;
   }
 }

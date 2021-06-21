@@ -1,0 +1,80 @@
+.Main {
+   width: 100%;
+   height: auto;
+   padding: 0%;
+   margin: 0%;
+   text-align: center;
+}
+.Main-hero {
+    padding: 128px 16px 128px 16px !important;
+}
+.Main-text {
+    font-size: 3rem;
+    font-family: inherit ;
+    padding-left: 10%;
+    padding-right: 10%;
+    font-style: unset;
+    color: #333e48;
+    
+    
+}.Main-text2 {
+    color: #333e48 !important;
+    font-size: 1rem;
+    font-family: initial;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    font-weight: 400;
+    
+}
+.Main-button {
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+    transition: all 0.3s ease-out;
+    background:linear-gradient(to right, #62D1ED, #62AEED);
+    color: #fff;
+    transition: 250ms;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+
+}
+@media screen and (max-width:960) {
+    .Main-text {
+        font-size: 2rem;
+
+    }
+}
+
+.Second {
+   width: 100%;
+   display: flex;
+    margin-top: 50%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+.Second-img1 {
+    width: 50%;
+}
+.Second-text {
+    text-align: left;
+    width: 50%;
+    padding-top: 70px;
+    padding-left: 40px;
+}
+.Second-text-hd {
+    font-size: 2rem;
+    padding-bottom: 2rem;
+}
+.Second-text-p {
+    font-style: initial;
+    font-size: 1rem;
+}
+.Second-text-list {
+    display: flex;
+    padding-top: 3rem;
+}
+.Second-link {
+    border-style: solid 1px black
+    ;
+}
